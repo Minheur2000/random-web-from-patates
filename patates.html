@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub des pommes de terre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Retour a l'accueil">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Patate Hub</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="#jeu">Snake</a>
+      <a href="#guide">Guide</a>
+      <a href="#faits">Faits</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Pommes de terre, jeu et mini-guide</p>
+        <h1>Le hub croustillant des pommes de terre</h1>
+        <p>
+          Explore quelques varietes, lance une partie de Snake et ramasse les patates
+          sans te cogner dans les murs.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#jeu">Jouer au Snake</a>
+          <a class="button secondary" href="#guide">Voir le guide</a>
+        </div>
+      </div>
+
+      <div class="hero-board" aria-label="Apercu decoratif de pommes de terre">
+        <img class="hero-image" src="assets/potato-hero.png" alt="Illustration de pommes de terre">
+        <div class="potato-card large">
+          <span class="potato-shape"></span>
+          <strong>Charlotte</strong>
+          <small>ferme et fondante</small>
+        </div>
+        <div class="potato-card">
+          <span class="potato-shape red"></span>
+          <strong>Roseval</strong>
+          <small>parfaite en salade</small>
+        </div>
+        <div class="potato-card">
+          <span class="potato-shape gold"></span>
+          <strong>Bintje</strong>
+          <small>reine des frites</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-strip" aria-label="Raccourcis du hub">
+      <a href="#jeu">
+        <span>01</span>
+        <strong>Snake</strong>
+        <small>Une partie rapide dans le potager.</small>
+      </a>
+      <a href="#guide">
+        <span>02</span>
+        <strong>Guide</strong>
+        <small>Choisir la bonne patate.</small>
+      </a>
+      <a href="#faits">
+        <span>03</span>
+        <strong>Faits</strong>
+        <small>Quelques infos a connaitre.</small>
+      </a>
+    </section>
+
+    <section id="jeu" class="game-section">
+      <div class="section-heading">
+        <p class="eyebrow">Mini-jeu</p>
+        <h2>Snake aux patates</h2>
+        <p>Utilise les fleches directionnelles. Mange les patates, evite les murs et ton propre corps.</p>
+      </div>
+
+      <div class="game-shell">
+        <div class="game-topbar">
+          <div id="score">Score: 0</div>
+          <p>Objectif: remplir le potager.</p>
+        </div>
+
+        <div class="game-stage">
+          <canvas id="game" tabindex="0" aria-label="Jeu Snake"></canvas>
+          <div id="overlay" class="hidden">
+            <div id="message"></div>
+            <button id="restart" type="button">Rejouer</button>
+          </div>
+        </div>
+
+        <p class="hint">Clique sur le plateau si les touches ne repondent pas.</p>
+      </div>
+    </section>
+
+    <section id="guide" class="guide-section">
+      <div class="section-heading">
+        <p class="eyebrow">Guide rapide</p>
+        <h2>Quelle pomme de terre choisir ?</h2>
+      </div>
+
+      <div class="guide-grid">
+        <article>
+          <h3>Frites</h3>
+          <p>Choisis une variete farineuse comme la Bintje pour un interieur moelleux et une surface doree.</p>
+        </article>
+        <article>
+          <h3>Salades</h3>
+          <p>Prends une chair ferme comme Charlotte ou Roseval pour garder des tranches nettes.</p>
+        </article>
+        <article>
+          <h3>Puree</h3>
+          <p>Prefere une pomme de terre riche en amidon, facile a ecraser et a lier avec du beurre.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faits" class="facts-section">
+      <div class="section-heading">
+        <p class="eyebrow">Le saviez-vous ?</p>
+        <h2>Trois faits sur les pommes de terre</h2>
+      </div>
+
+      <div class="facts-grid">
+        <article>
+          <span>4000+</span>
+          <h3>Varietes</h3>
+          <p>On compte des milliers de varietes cultivees dans le monde.</p>
+        </article>
+        <article>
+          <span>Andes</span>
+          <h3>Origine</h3>
+          <p>La domestication de la pomme de terre vient d'Amerique du Sud.</p>
+        </article>
+        <article>
+          <span>Polyvalente</span>
+          <h3>Cuisine</h3>
+          <p>Vapeur, four, puree, gratin ou frites: chaque texture a son usage.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Patate Hub - Snake, guide et pommes de terre.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
